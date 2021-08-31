@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单学习</title>
+</head>
+<body>
+
+<h1>注册</h1>
+
+<!--
+    表单form, 表单里的东西都可以用input来实现
+    action: 表单提交的位置，可以是网站，也可以是一个请求处理地址
+    method: post, get 提交方式
+        get方式提交: 我们可以在url中看到我们提交的信息，不安全，高效
+        post: 比较安全，传输大文件
+-->
+<form action="1.%20my%20first%20web%20page.html" method="get">
+
+    <!-- 文本输入框: input type="text" -->
+    <!--
+        value: 默认初始值
+        maxlength: 最长能写几个字符
+        size: 文本框的长度
+     -->
+    <p>名字: <input type="text" name="username" value="这是初始值" maxlength="8" size="30"></p>
+    <!-- 密码框: input type="password" -->
+    <p>密码: <input type="password" name="pwd"></p>
+
+    <p>
+        性别:
+        <!--
+            radio(单选框标签，圆形选项):
+            一定要有value，才能读取选项的值
+            一系列的选项应该归类到同一个name，所以name也是必写
+         -->
+        <input type="radio" value="boy" name="sex">男
+        <input type="radio" value="girl" name="sex">女
+    </p>
+
+    <!--
+        多选框checkbox:
+
+     -->
+    <p>
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="read" name="hobby">读书
+        <input type="checkbox" value="game" name="hobby">游戏
+        <input type="checkbox" value="code" name="hobby">写代码
+    </p>
+
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+</form>
+</body>
+</html>
